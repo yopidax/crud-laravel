@@ -14,11 +14,12 @@ class TasksController extends Controller
      *
      * @return Response
      */
-     public function index() {
+    public function index()
+    {
         $tasks = Task::orderBy('created_at', 'asc')->get();
 
         return view('tasks', [
-            'tasks' => $tasks
+          'tasks' => $tasks
         ]);
     }
 
@@ -29,7 +30,8 @@ class TasksController extends Controller
      *
      * @return Response
      */
-    public function create(Request $request) {
+    public function create(Request $request)
+    {
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
         ]);
@@ -53,7 +55,8 @@ class TasksController extends Controller
      *
      * @return Response
      */
-    public function delete(Task $task) {
+    public function delete(Task $task)
+    {
         $task->delete();
         return redirect('/');
     }
