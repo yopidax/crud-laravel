@@ -10,7 +10,7 @@ class TasksController extends Controller
 {
 
     /**
-     * Index page;
+     * Index page.
      *
      * @return Response
      */
