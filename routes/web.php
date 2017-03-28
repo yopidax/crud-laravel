@@ -11,6 +11,6 @@
    |
  */
 
-Route::get('/', 'TasksController@index');
-Route::post('/task', 'TasksController@create');
-Route::delete('/task/{task}', 'TasksController@delete');
+Route::get('/task', 'TasksController@index');
+Route::post('/task/create', 'TasksController@create');
+Route::delete('/task/delete/{task}', 'TasksController@delete');

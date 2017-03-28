@@ -9,7 +9,7 @@
         @include('common.errors')
 
         <!-- 新タスクフォーム -->
-        <form action="{{ url('task') }}" method="POST" class="form-horizontal">
+        <form action="{{ url('task/create') }}" method="POST" class="form-horizontal">
             {{ csrf_field() }}
 
             <!-- タスク名 -->
@@ -58,7 +58,7 @@
                                 </td>
 
                                 <td>
-                                    <form action="{{ url('task/'.$task->id) }}" method="POST">
+                                    <form action="{{ url('task/delete/'.$task->id) }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button type="submit" class="btn btn-danger">

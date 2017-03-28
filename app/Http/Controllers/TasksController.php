@@ -37,7 +37,7 @@ class TasksController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect('/')
+            return redirect('/task')
                 ->withInput()
                 ->withErrors($validator);
         }
@@ -45,7 +45,7 @@ class TasksController extends Controller
         $task = new Task;
         $task->name = $request->name;
         $task->save();
-        return redirect('/');
+        return redirect('/task');
     }
 
     /**
@@ -58,6 +58,6 @@ class TasksController extends Controller
     public function delete(Task $task)
     {
         $task->delete();
-        return redirect('/');
+        return redirect('/task');
     }
 }
