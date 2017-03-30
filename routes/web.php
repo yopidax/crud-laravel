@@ -14,3 +14,6 @@
 Route::get('/task', 'TasksController@index');
 Route::post('/task/create', 'TasksController@create');
 Route::delete('/task/delete/{task}', 'TasksController@delete');
+
+Route::get('/articles', 'ArticlesController@index');
+Route::get('/articles/show/{id}', 'ArticlesController@show');
